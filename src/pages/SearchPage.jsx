@@ -8,15 +8,9 @@ function SearchPage() {
   const [keyword, setKeyword] = useState("");
   const navigate = useNavigate();
 
-  // const handleSearch = async () => {
-  //   if (!keyword) return;
-  //   await axios.post("http://localhost:5000/api/search", { keyword });
-  //   navigate("/dashboard");
-  // };
-
   const handleSearch = async () => {
     if (!keyword) return;
-    await axios.post("https://api-driven-backend.onrender.com/api/search", { keyword });
+    await axios.post("http://localhost:5000/api/search", { keyword });
     navigate("/dashboard");
   };
 
