@@ -3,13 +3,14 @@ import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 function Dashboard() {
   const [results, setResults] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 5;
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/results").then((res) => {
+    axios.get(`${import.meta.env.VITE_REACT_BACKEND_BASEURL}/results`).then((res) => {
       setResults(res.data);
     });
   }, []);

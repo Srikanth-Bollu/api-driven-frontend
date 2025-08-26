@@ -10,7 +10,7 @@ function SearchPage() {
 
   const handleSearch = async () => {
     if (!keyword) return;
-    await axios.post("http://localhost:5000/api/search", { keyword });
+    await axios.post(`${import.meta.env.VITE_REACT_BACKEND_BASEURL}/search`, { keyword });
     navigate("/dashboard");
   };
 
