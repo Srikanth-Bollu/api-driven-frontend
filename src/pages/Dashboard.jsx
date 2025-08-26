@@ -10,7 +10,7 @@ function Dashboard() {
   const pageSize = 5;
 
   useEffect(() => {
-    axios.get(`${import.meta.env.VITE_REACT_BACKEND_BASEURL}/api/results`).then((res) => {
+    axios.get(`${import.meta.env.VITE_REACT_BACKEND_BASEURL}api/results`).then((res) => {
       setResults(res.data);
     });
   }, []);
